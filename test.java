@@ -11,7 +11,7 @@ public class test {
 		for (int k=1; k<5; k++) x.remove(k);
 		for (int k : x) System.out.print(k + "-");
 		
-		
+		// crap in my bummy hwat 
 	}
 
 }
