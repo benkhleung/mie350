@@ -1,0 +1,16 @@
+package com.mie.model;
+
+//only getters
+
+public class Glossary {
+	private String term;
+	private String def;
+	
+	public String getTerm(){
+		return term;
+	}
+	
+	public String getDef(){
+		return def;
+	}
+}
