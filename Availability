@@ -1,0 +1,23 @@
+package com.mie.model;
+
+//Basing it off the simple web app example
+//Getters only 
+
+public class Availability {
+	private int productID;
+	private int storeID;
+	private int avail;
+	
+	public int getProductID(){
+		return productID;
+	}
+	
+	public int getStoreID(){
+		return storeID;
+	}
+	
+	public int getAvail(){
+		return avail;
+	}
+	
+}
