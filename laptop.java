@@ -1,7 +1,5 @@
   package com.mie.model;
 
-//getters
-
 public class Laptop {
 	private int productID;
 	private String brand;
@@ -34,6 +32,8 @@ public class Laptop {
 	private String camera;
 	private String backlitKeyboard;
 	private String imgSource;
+	
+	//getters
 	
 	public int getProductID(){
 		return productID;
