@@ -124,7 +124,7 @@ public class Laptop {
 	}
 	
 	public String getUsbPorts(){
-		return usePorts;
+		return usbPorts;
 	}
 	
 	public String getInternet(){
