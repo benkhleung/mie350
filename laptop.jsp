@@ -25,6 +25,10 @@ while(resultSet.next())
 	<%
 }
 %>
-
+<%
+// close database connections
+stmt.close();
+con.close();
+%>
 </body>
 </html>
