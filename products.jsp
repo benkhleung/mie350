@@ -8,5 +8,25 @@
 <body>
 <%@ include file="menu.jsp" %>
 <%@ include file="FilterForm.jsp" %>
+<%
+String sql = "select * from Laptops";
+ResultSet resultSet = stmt.executeQuery(sql);
+%>
+
+<table border="1" cellpadding=3>
+<%while(resultSet.next()){ %>
+<tr>
+	<%int laptop_id = resultSet.getInt(1); %>
+  	<td> <%= laptop_id %></td>
+  	<%String imgSource = resultSet.getString(31);%>
+	<td> <a href="laptop.jsp?prodID=<%=laptop_id%>"><img src="<%=imgSource%>" alt=<%=laptop_id%>></a> </td>
+</tr>
+<% } %>        
+</table>
+<%
+// close database connections
+stmt.close();
+con.close();
+%>
 </body>
 </html>
