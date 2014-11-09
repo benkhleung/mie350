@@ -5,6 +5,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<%
+//Database connection
+String url = "jdbc:odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=W:\\workspace\\webapptrial\\Database\\Database.accdb";
+Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+Connection con = DriverManager.getConnection(url); 
+Statement stmt = con.createStatement(); 
+%>
 <body>
 <p>
 <a href="index.jsp">Home</a> |
