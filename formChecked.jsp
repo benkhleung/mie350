@@ -1,3 +1,15 @@
+
+
+
+
+
+
+<%//NOT USED ANYMORE!!!!%>
+
+
+
+
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page import="java.util.*" %>
@@ -33,5 +45,30 @@
 		
 		%>
 	</table>
+	
+	<% 
+		boolean allProducts = true;
+		String[] brands  = (String[])request.getParameterValues("brand");
+		String[] processes = (String[])request.getParameterValues("processor");
+	
+		if(brands != null)
+		{
+			System.out.println("woahhh brands :D");
+			allProducts = false;
+		}
+		
+		if(processes != null)
+		{
+			System.out.println("woahhh processes :D");
+			allProducts = false;
+		}
+		
+		
+		if(allProducts)
+		{
+			System.out.println("print allll da products :D");
+		}
+	%>
+	
 </body>
 </html>
