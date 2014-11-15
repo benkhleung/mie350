@@ -44,6 +44,61 @@ while(resultSet.next())
 	<%
 }
 %>
+
+<br /><br />
+<h2><strong>Ratings</strong></h2>
+<br />
+
+<%
+String reviewsql = "select * from Reviews where ProductID=" + laptop_id;
+
+int sumRating = 0;
+int countRating = 0;
+double avgRating = 0;
+
+ResultSet resultSetReviews = stmt.executeQuery(reviewsql);
+
+while(resultSetReviews.next())
+{
+sumRating += Integer.parseInt(resultSetReviews.getString(2));
+countRating++;
+}
+
+if (countRating != 0)
+avgRating = sumRating / countRating;
+System.out.println(avgRating);
+%>
+
+<h4>Overall Average Rating: <%=avgRating %> </h4>
+<h5>out of <%=countRating %> reviews</h5>
+
+<form name="reviewForm" method="POST" action="thankYouForReview.jsp?prodID=<%=laptop_id%>">
+<h3>Submit a review!</h3>
+<table>
+<tr>
+<th colspan=5>Overall Rating</th>
+</tr>
+<tr>
+<td align=center>1</td>
+<td align=center>2</td>
+<td align=center>3</td>
+<td align=center>4</td>
+<td align=center>5</td>
+</tr>
+<tr>
+<td><label><input type="radio" name="rating" value="1"/></label></td>
+<td><label><input type="radio" name="rating" value="2"/></label></td>
+<td><label><input type="radio" name="rating" value="3"/></label></td>
+<td><label><input type="radio" name="rating" value="4"/></label></td>
+<td><label><input type="radio" name="rating" value="5"/></label></td>
+</tr>
+<tr>
+<td align=center colspan=5><input type="submit" value="Submit"/></td>
+</tr>
+</table>
+</form>
+
+
 <%
 // close database connections
 stmt.close();
