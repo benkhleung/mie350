@@ -19,6 +19,25 @@ while(resultSet.next())
 	%>
 	<table>
 	   <tr><td><p><%=resultSet.getString(3)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(2)%></p></td></tr>	   
+	   <tr><td><p><%=resultSet.getString(4)%></p></td></tr>	
+	   <tr><td><p><%=resultSet.getString(6)%></p></td></tr>		   
+	   <tr><td><p><%=resultSet.getString(8)%></p></td></tr>	
+	   <tr><td><p><%=resultSet.getString(9)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(10)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(11)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(13)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(15)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(16)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(18)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(19)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(20)%></p></td></tr>	 
+	   <tr><td><p><%=resultSet.getString(22)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(23)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(25)%></p></td></tr>	 
+	   <tr><td><p><%=resultSet.getString(27)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(28)%></p></td></tr>
+	   <tr><td><p><%=resultSet.getString(29)%></p></td></tr>	 
 	   <%String imgSource = resultSet.getString(31);%>
 	   <tr><td> <img src="<%=imgSource%>" alt=<%=laptop_id%>></td></tr>
 	</table>
