@@ -29,6 +29,14 @@ import = "java.util.*"%>
 		String[] batteryLife = (String[])request.getParameterValues("batteryLife");
 		String[] category = (String[])request.getParameterValues("category");
 		
+		//if filtering process began at homepage
+		String categoryType = (String)request.getParameter("categoryType");
+		if(categoryType != null)
+		{
+			allProducts = false;
+			sql = sql.concat(" where Category= '"+ categoryType + "'");
+		}
+		
 		String[][] filterType = {brands, screenSize, price, processor, operatingSys, ram, hardDrive, ssd, weight, graphics, batteryLife, category};
 		String[] filterTypeAttributes = {"Brand= ", "ScreenSize= ", "PriceRange= ", "CPUBrand= ", "OS= ", "RAM= ", "HDD= ", "SSD= ", "WeightRange= ", "GraphicsBrand= ", "BatterLifeRange= ", "Category= "};
 		
