@@ -18,7 +18,8 @@ Statement stmt = con.createStatement();
 <a href="index.jsp">Home</a> |
 <a href="products.jsp">Products</a> |
 <a href="compare.jsp">Compare</a> |
-<a href="aboutUs.jsp">About Us</a>
+<a href="aboutUs.jsp">About Us</a> |
+<a href="searchFunction.jsp">Search</a>
 <br /><br /> 
 </p>
 </body>
