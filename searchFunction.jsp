@@ -4,26 +4,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Search Function</title>
+<title>Results</title>
 </head>
 <body>
 <%@ include file="menu.jsp" %>
 
-<% String search = request.getParameter("search"); %>
 
 <!-- copying some of the code from laptop.jsp -->
 
 <%
-String sql = "select * from Laptops where Brand ="+ search;
+
+String search = request.getParameter("search");
+String sql = "select * from Laptops where Brand =" + "'" +search + "'";
 ResultSet resultSet = stmt.executeQuery(sql);
 String message ="";
-
 if(resultSet.next()==false){
 	message = "terrible search term</br>";
 }
-
 else{
-while(resultSet.next())
+while(resultSet.next()) //replace code in while loop, so it doesn't only show picture and the laptop code
 {
 	%>
 	<table>
@@ -45,5 +44,6 @@ while(resultSet.next())
 stmt.close();
 con.close();
 %>
+
 </body>
 </html>
