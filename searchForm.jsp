@@ -7,11 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file ="menu.jsp" %>
+
+<%@ include file="menu.jsp" %>
 
 <form method ="post" action="searchFunction.jsp">
 Brand Search: <input type="text" name="search"/> <br />
-<input type="submit" />
+<input type="submit" value="search" />
 </form>
 
 
