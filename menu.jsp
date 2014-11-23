@@ -52,9 +52,9 @@ Statement stmt = con.createStatement();
       <ul class="nav navbar-nav">
         <li><a href="index.jsp">Home</a></li>
         <li><a href="aboutUs.jsp">About Us</a></li>
-		<li><a href="products.jsp">Products</a></li>
-		<li><a href="compare.jsp">Compare</a></li>       
-		<li><a href="searchForm.jsp">Search</a></li>
+	<li><a href="products.jsp">Products</a></li>
+	<li><a href="compare.jsp">Compare</a></li>       
+	<li><a href="searchForm.jsp">Search</a></li>
       </ul>
             </div>
             <!-- /.navbar-collapse -->
