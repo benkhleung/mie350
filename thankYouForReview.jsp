@@ -19,7 +19,10 @@ System.out.println(sqlRating);
 %>
 <br />
 <a href="laptop.jsp?prodID=<%=laptop_id%>">Return to Laptop</a>
+
+
+
+<%@ include file="footer.jsp" %>
+
 </body>
-</html>​
-
-
+</html>
