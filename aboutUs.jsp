@@ -17,5 +17,8 @@ laptop terms, various laptop brands and models (including their specifications),
 available for purchase, and categories that distinguish consumers' laptop usage behaviours for easier 
 laptop differentiation. 
 </p>
+
+<%@ include file="footer.jsp" %>
+
 </body>
 </html>
