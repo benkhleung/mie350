@@ -20,5 +20,8 @@ Why not get started with searching through laptops based on your usage:
 <br />
 <a href="products.jsp?categoryType=Lightweight">Lightweight</a>
 
+
+<%@ include file="footer.jsp" %>
+
 </body>
 </html>
