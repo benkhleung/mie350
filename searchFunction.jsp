@@ -13,7 +13,6 @@
 <!-- copying some of the code from laptop.jsp -->
 
 <%
-
 String search = request.getParameter("search");
 String sql = "select * from Laptops where Brand =" + "'" +search + "'";
 ResultSet resultSet = stmt.executeQuery(sql);
@@ -44,6 +43,8 @@ while(resultSet.next()) //replace code in while loop, so it doesn't only show pi
 stmt.close();
 con.close();
 %>
+
+<%@ include file="footer.jsp" %>
 
 </body>
 </html>
