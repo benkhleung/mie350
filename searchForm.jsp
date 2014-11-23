@@ -15,6 +15,7 @@ Brand Search: <input type="text" name="search"/> <br />
 <input type="submit" value="search" />
 </form>
 
+<%@ include file="footer.jsp" %>
 
 </body>
 </html>
