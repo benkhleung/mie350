@@ -10,7 +10,6 @@
 <%
 int laptop_id = Integer.parseInt(request.getParameter("prodID"));
 //System.out.println(laptop_id);
-
 //SQl STUFF TO PRINT INFO FOR LAPTOP WITH SAID ID
 String sql = "select * from Laptops where ProductID="+laptop_id;
 ResultSet resultSet = stmt.executeQuery(sql);
@@ -60,12 +59,12 @@ ResultSet resultSetReviews = stmt.executeQuery(reviewsql);
 
 while(resultSetReviews.next())
 {
-sumRating += Integer.parseInt(resultSetReviews.getString(2));
-countRating++;
+	sumRating += Integer.parseInt(resultSetReviews.getString(2));
+	countRating++;
 }
 
 if (countRating != 0)
-avgRating = sumRating / countRating;
+	avgRating = (double)sumRating / countRating;
 System.out.println(avgRating);
 %>
 
@@ -98,11 +97,14 @@ System.out.println(avgRating);
 </table>
 </form>
 
-
 <%
 // close database connections
 stmt.close();
 con.close();
 %>
+
+
+<%@ include file="footer.jsp" %>
+
 </body>
 </html>
