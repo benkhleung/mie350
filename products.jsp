@@ -4,7 +4,7 @@ import = "java.util.*"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Laptop List</title>
 </head>
 <body>
 <%@ include file="menu.jsp" %>
@@ -14,7 +14,7 @@ import = "java.util.*"%>
 		boolean allProducts = true; //to see if user filters anything
 		int filterCounter = 0; //to see if anything does get filtered
 		String sql = "select * from Laptops"; //beginning of SQL query
-		
+				
 		//arrays of the filtering categories used to edit the query
 		String[] brands  = (String[])request.getParameterValues("brand");
 		String[] screenSize = (String[])request.getParameterValues("screenSize");
@@ -70,7 +70,7 @@ import = "java.util.*"%>
 			ResultSet resultSet = stmt.executeQuery(sql);
 			boolean results = false;
 			%>
-			<table border="1" cellpadding=3>
+			<table border="2" cellpadding="5" align="center">
 			<%while(resultSet.next()) { %>
 			<tr>
 				<%results = true;
@@ -78,6 +78,7 @@ import = "java.util.*"%>
 			  	<td> <%= laptop_id %></td>
 			  	<%String imgSource = resultSet.getString(31);%>
 				<td> <a href="laptop.jsp?prodID=<%=laptop_id%>"><img src="<%=imgSource%>" alt=<%=laptop_id%>></a> </td>
+				<td> <p><label><input type="checkbox" name=<%=laptop_id%> value=<%=laptop_id%>/>Add to compareList</label></p> </td>
 				<td><p>Brand: <%=resultSet.getString(2)%></p></td>   
 	  			<td><p>Model: <%=resultSet.getString(3)%></p></td>	
 	   			<td><p>Price: <%=resultSet.getString(6)%></p></td>
@@ -95,20 +96,27 @@ import = "java.util.*"%>
 			sql = "select * from Laptops";
 			ResultSet resultSet = stmt.executeQuery(sql);	
 		%>
-			<table border="1" cellpadding=3>
+			<form name="compare" action="compare.jsp" method="GET">
+			<table border="2" cellpadding="5" align="center">
 			<%while(resultSet.next()){ %>
 			<tr>
 				<%int laptop_id = resultSet.getInt(1); %>
 			  	<td> <%= laptop_id %></td>
 			  	<%String imgSource = resultSet.getString(31);%>
 				<td> <a href="laptop.jsp?prodID=<%=laptop_id%>"><img src="<%=imgSource%>" alt=<%=laptop_id%>></a> </td>
-				<td> <p><label><input type="checkbox" name=<%=laptop_id%> value=<%=laptop_id%>/>Add to compareList</label></p> </td>
+
+				<td><label><input type="checkbox" name=<%=laptop_id%> <% if (session.getAttribute("laptop_id") != null)
+ 				out.print("checked"); %> value=<%=laptop_id%>/>Compare this laptop</label></td>
+				
 				<td><p>Brand: <%=resultSet.getString(2)%></p></td>   
 	  			<td><p>Model: <%=resultSet.getString(3)%></p></td>	
 	   			<td><p>Price: <%=resultSet.getString(6)%></p></td>
 			</tr>
-			<% } %>        
+			<% } %>
+			
 			</table>
+			<input type="submit" value="Compare Selected Laptops" name="Compare" />
+			</form>
 		<%}
 	%>
 
@@ -117,5 +125,9 @@ import = "java.util.*"%>
 stmt.close();
 con.close();
 %>
+
+
+<%@ include file="footer.jsp" %>
+
 </body>
 </html>
