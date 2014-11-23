@@ -42,8 +42,10 @@ Statement stmt = con.createStatement();
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">
-                    <h1>Team Six Sigma Inc.</h1>
+                <a class="navbar-brand" href="index.jsp">
+                <h1>
+                    Team Six &#931; Inc.
+                </h1>
                 </a>
             </div>
 
@@ -52,9 +54,9 @@ Statement stmt = con.createStatement();
       <ul class="nav navbar-nav">
         <li><a href="index.jsp">Home</a></li>
         <li><a href="aboutUs.jsp">About Us</a></li>
-	<li><a href="products.jsp">Products</a></li>
-	<li><a href="compare.jsp">Compare</a></li>       
-	<li><a href="searchForm.jsp">Search</a></li>
+		<li><a href="products.jsp">Products</a></li>
+		<li><a href="compare.jsp">Compare</a></li>       
+		<li><a href="searchForm.jsp">Search</a></li>
       </ul>
             </div>
             <!-- /.navbar-collapse -->
