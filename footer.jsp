@@ -23,7 +23,7 @@
 					</div>
 					 -->
 					 
-					<p>Team Six Sigma Inc. All rights reserved.</p>
+					<p>Team Six &#931; Inc. All rights reserved.</p>
 				</div>
 			</div>	
 		</div>
