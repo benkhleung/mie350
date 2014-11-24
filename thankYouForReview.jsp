@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Much thanks very rating wow</title>
+<title>Review Confirmation - Team Six Sigma Inc.</title>
 </head>
 <body>
 <%@ include file="menu.jsp" %>
