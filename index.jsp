@@ -8,12 +8,15 @@
 <body>
 <%@ include file="menu.jsp" %>
 
+<div style="font-size: 20px; background-color: #ddd; width:70%; margin-left:auto; margin-right:auto; border-radius: 19px; text-align: center; ">
+
 Welcome to this amazing laptop site that you have never seen before! (because we made it...)
 <br />
 We hope you enjoy your visit here. 
 <br />
 Why not get started with searching through laptops based on your usage:
-<br />
+</div>
+
 <h5><a href="products.jsp?categoryType=Performance / Gaming">Performance / Gaming</a></h5>
 <br />
 <h5><a href="products.jsp?categoryType=Work / School">Work / School</a></h5>
