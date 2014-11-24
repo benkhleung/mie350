@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>About Us</title>
+<title>About Us - Team Six Sigma Inc.</title>
 </head>
 <body>
 <%@ include file="menu.jsp" %>
