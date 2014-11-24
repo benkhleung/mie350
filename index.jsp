@@ -3,22 +3,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Find yer laptop yo!!</title>
+<title>Home Page - Team Six Sigma Inc.</title>
 </head>
 <body>
 <%@ include file="menu.jsp" %>
 
-Welcome to this amazing laptop site that you have seen before (because it sorta sucks and we made it... this never seen before).
+Welcome to this amazing laptop site that you have never seen before! (because we made it...)
 <br />
-I hope you enjoy your visit here. 
+We hope you enjoy your visit here. 
 <br />
 Why not get started with searching through laptops based on your usage:
 <br />
-<a href="products.jsp?categoryType=Performance / Gaming">Performance / Gaming</a>
+<h5><a href="products.jsp?categoryType=Performance / Gaming">Performance / Gaming</a></h5>
 <br />
-<a href="products.jsp?categoryType=Work / School">Work / School</a>
+<h5><a href="products.jsp?categoryType=Work / School">Work / School</a></h5>
 <br />
-<a href="products.jsp?categoryType=Lightweight">Lightweight</a>
+<h5><a href="products.jsp?categoryType=Lightweight">Lightweight</a></h5>
 
 
 <%@ include file="footer.jsp" %>
