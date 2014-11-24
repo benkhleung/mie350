@@ -4,11 +4,16 @@ import = "java.util.*"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Laptop List</title>
+<title>Laptop List - Team Six Sigma Inc.</title>
 </head>
 <body>
 <%@ include file="menu.jsp" %>
+
+
+
 <%@ include file="filterForm.jsp" %>
+
+
 
 	<% 
 		boolean allProducts = true; //to see if user filters anything
@@ -78,10 +83,11 @@ import = "java.util.*"%>
 			  	<td> <%= laptop_id %></td>
 			  	<%String imgSource = resultSet.getString(31);%>
 				<td> <a href="laptop.jsp?prodID=<%=laptop_id%>"><img src="<%=imgSource%>" alt=<%=laptop_id%>></a> </td>
-				<td> <p><label><input type="checkbox" name=<%=laptop_id%> value=<%=laptop_id%>/>Add to compareList</label></p> </td>
-				<td><p>Brand: <%=resultSet.getString(2)%></p></td>   
-	  			<td><p>Model: <%=resultSet.getString(3)%></p></td>	
-	   			<td><p>Price: <%=resultSet.getString(6)%></p></td>
+				<td><p>Brand: <%=resultSet.getString(2)%></p>   
+	  				<p>Model: <%=resultSet.getString(3)%></p>	
+	   				<p>Price: $<%=resultSet.getString(6)%></p>
+	   				<p><label><input type="checkbox" name=<%=laptop_id%> value=<%=laptop_id%>/> Compare</label></p>
+	   			</td>
 			</tr>
 			<% } %>        
 			</table> 
@@ -97,28 +103,31 @@ import = "java.util.*"%>
 			ResultSet resultSet = stmt.executeQuery(sql);	
 		%>
 			<form name="compare" action="compare.jsp" method="GET">
-			<table border="2" cellpadding="5" align="center">
+			<table border="2" cellpadding="5" align="center" >
 			<%while(resultSet.next()){ %>
 			<tr>
 				<%int laptop_id = resultSet.getInt(1); %>
 			  	<td> <%= laptop_id %></td>
 			  	<%String imgSource = resultSet.getString(31);%>
 				<td> <a href="laptop.jsp?prodID=<%=laptop_id%>"><img src="<%=imgSource%>" alt=<%=laptop_id%>></a> </td>
-
-				<td><label><input type="checkbox" name=<%=laptop_id%> <% if (session.getAttribute("laptop_id") != null)
- 				out.print("checked"); %> value=<%=laptop_id%>/>Compare this laptop</label></td>
 				
-				<td><p>Brand: <%=resultSet.getString(2)%></p></td>   
-	  			<td><p>Model: <%=resultSet.getString(3)%></p></td>	
-	   			<td><p>Price: <%=resultSet.getString(6)%></p></td>
+				<td><p>Brand: <%=resultSet.getString(2)%></p>   
+	  				<p>Model: <%=resultSet.getString(3)%></p>	
+	   				<p>Price: $<%=resultSet.getString(6)%></p>
+	   				<p><label><input type="checkbox" name=<%=laptop_id%> <% if (session.getAttribute("laptop_id") != null)
+ 				out.print("checked"); %> value=<%=laptop_id%>/> Compare</label></p>
+	   			</td>
 			</tr>
 			<% } %>
 			
 			</table>
+			<div style="float:center;">
 			<input type="submit" value="Compare Selected Laptops" name="Compare" />
+			</div>
 			</form>
 		<%}
 	%>
+
 
 <%
 // close database connections
