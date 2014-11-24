@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Results</title>
+<title>Search Results - Team Six Sigma Inc.</title>
 </head>
 <body>
 <%@ include file="menu.jsp" %>
@@ -18,7 +18,7 @@ String sql = "select * from Laptops where Brand =" + "'" +search + "'";
 ResultSet resultSet = stmt.executeQuery(sql);
 String message ="";
 if(resultSet.next()==false){
-	message = "terrible search term</br>";
+	message = "No matches found! </br>";
 }
 else{
 while(resultSet.next()) //replace code in while loop, so it doesn't only show picture and the laptop code
