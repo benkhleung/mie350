@@ -64,24 +64,13 @@ Statement stmt = con.createStatement();
         <!-- /.container -->
     </nav>
 
-<!-- Section: intro -->
-    <section id="intro" class="intro" style="background:url('blue.jpg') no-repeat top center;">
-	<%//above is menu stuff?????? %>
-		<div class="slogan">
-			<h2>Team Six Sigma</h2>
-			<h4>Making laptop purchases easier since 2014.</h4>
-		</div>
-		<!-- 
-		<div class="page-scroll">
-			<a href="#service" class="btn btn-circle">
-				<i class="fa fa-angle-double-down animated"></i>
-			</a>
-		</div>
-		-->
-		
-    </section>
-	<!-- /Section: intro -->
+<!-- 
+this is the jumbotron at the top
+ -->
+<div style="background-color: #67B0D1; height:150px; width:100%;">
 
+
+</div>
 
 
 
