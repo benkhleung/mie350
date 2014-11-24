@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Laptop</title>
+<title>Laptop Specifications - Team Six Sigma Inc.</title>
 </head>
 <body>
 <%@ include file="menu.jsp" %>
@@ -16,29 +16,94 @@ ResultSet resultSet = stmt.executeQuery(sql);
 while(resultSet.next())
 {
 	%>
-	<table>
-	   <tr><td><p><%=resultSet.getString(3)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(2)%></p></td></tr>	   
-	   <tr><td><p><%=resultSet.getString(4)%></p></td></tr>	
-	   <tr><td><p><%=resultSet.getString(6)%></p></td></tr>		   
-	   <tr><td><p><%=resultSet.getString(8)%></p></td></tr>	
-	   <tr><td><p><%=resultSet.getString(9)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(10)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(11)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(13)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(15)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(16)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(18)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(19)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(20)%></p></td></tr>	 
-	   <tr><td><p><%=resultSet.getString(22)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(23)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(25)%></p></td></tr>	 
-	   <tr><td><p><%=resultSet.getString(27)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(28)%></p></td></tr>
-	   <tr><td><p><%=resultSet.getString(29)%></p></td></tr>	 
-	   <%String imgSource = resultSet.getString(31);%>
-	   <tr><td> <img src="<%=imgSource%>" alt=<%=laptop_id%>></td></tr>
+	<table align="center" style="width:33%; padding:3px;">
+	<%String imgSource = resultSet.getString(31);%>
+	   <tr><td> <img align="middle" src="<%=imgSource%>" alt=<%=laptop_id%>></td></tr>
+	</table>
+	
+	<table border="1" align="center" style="width:33%; padding:3px;">
+	   <tr><td style="text-align:center;" colspan="2"><h3><%=resultSet.getString(2)%> <%=resultSet.getString(3)%></h3></td></tr> 
+	   
+	   <tr>
+	   <th>Model Number: </th>
+	   <td><p><%=resultSet.getString(4)%></p></td></tr>
+	   	
+	   <tr>
+	   <th>Price: </th>
+	   <td><p>$<%=resultSet.getString(6)%></p></td></tr>
+	      
+	   <tr>
+	   <th>Color: </th>
+	   <td><p><%=resultSet.getString(8)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Screen Size: </th>
+	   <td><p><%=resultSet.getString(9)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Dimensions: (L x W x H)</th>
+	   <td><p><%=resultSet.getString(10)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Weight: </th>
+	   <td><p><%=resultSet.getString(11)%></p></td></tr>
+	   
+	   <tr>
+	   <th>CPU: </th>
+	   <td><p><%=resultSet.getString(13)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Operating System: </th>
+	   <td><p><%=resultSet.getString(15)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Graphics: </th>
+	   <td><p><%=resultSet.getString(16)%></p></td></tr>
+	   
+	   <tr>
+	   <th>RAM: </th>
+	   <td><p><%=resultSet.getString(18)%></p></td></tr>
+	   
+	   <tr>
+	   <th>HDD: </th>
+	   <td><p><%=resultSet.getString(19)%></p></td></tr>
+	   
+	   <tr>
+	   <th>SSD: </th>
+	   <td><p><%=resultSet.getString(20)%></p></td></tr>
+	   
+	   <tr>
+	   <th>DVD Drive: </th>
+	   <td><p><%=resultSet.getString(21)%></p></td></tr>
+	   	 
+	   <tr>
+	   <th>Bluetooth: </th>
+	   <td><p><%=resultSet.getString(22)%></p></td></tr>
+	   
+	   <tr>
+	   <th>USB Ports: </th>
+	   <td><p><%=resultSet.getString(23)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Battery Life: </th>
+	   <td><p><%=resultSet.getString(25)%></p></td></tr>
+	   	 
+	   <tr>
+	   <th>Warranty: </th>
+	   <td><p><%=resultSet.getString(27)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Display Ports: </th>
+	   <td><p><%=resultSet.getString(28)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Webcam: </th>
+	   <td><p><%=resultSet.getString(29)%></p></td></tr>
+	   
+	   <tr>
+	   <th>Backlit Keyboard: </th>
+	   <td><p><%=resultSet.getString(30)%></p></td></tr>	 
+	   
 	</table>
 	<%
 }
